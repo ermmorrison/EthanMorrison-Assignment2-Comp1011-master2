@@ -15,3 +15,12 @@
 #instructionsLabel{
     -fx-text-size: 14pt;
 }
+
+.anchorPane{
+    -fx-border-color: black;
+}
+
+.button{
+    -fx-background-color: #302e2e;
+    -fx-text-fill: #ffffff;
+}

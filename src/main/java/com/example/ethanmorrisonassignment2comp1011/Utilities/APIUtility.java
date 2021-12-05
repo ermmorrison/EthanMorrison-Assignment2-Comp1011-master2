@@ -59,6 +59,19 @@ public class APIUtility {
         return result;
     }
 
+    public static Response getRandomMealFromAPI() throws IOException, InterruptedException {
+        Response result = null;
+        String uri = "https://www.themealdb.com/api/json/v1/1/random.php";
+
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+
+        HttpResponse<Path> response = client.send(request, HttpResponse.BodyHandlers.ofFile(Paths.get("apiResponse.json")));
+        result = getRecipeFromJSON();
+        return result;
+    }
+
+
     public static MealRecipe getMealRecipe(String mealID) throws IOException, InterruptedException {
         mealID = mealID.trim();
 

@@ -14,7 +14,7 @@
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <top>
-            <Label id="header" text="Recipe Look Up" BorderPane.alignment="CENTER" />
+            <Label id="header" fx:id="header" style="-fx-font-size: 35;" text="Recipe Look Up" BorderPane.alignment="CENTER" />
          </top>
          <right>
             <ListView fx:id="mealsListView" prefHeight="382.0" prefWidth="253.0" BorderPane.alignment="CENTER" />
@@ -49,6 +49,11 @@
                         <Insets top="15.0" />
                      </VBox.margin>
                   </Button>
+                  <Button mnemonicParsing="false" onAction="#getSearchResults3" text="Pick For Me">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
          </left>
@@ -56,7 +61,7 @@
             <ImageView fx:id="mealImageView" fitHeight="222.0" fitWidth="313.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
          </center>
          <bottom>
-            <Button mnemonicParsing="false" onAction="#getMealDetails" text="View Recipe" BorderPane.alignment="CENTER">
+            <Button fx:id="viewRecipeButton" mnemonicParsing="false" onAction="#getMealDetails" text="View Recipe" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="20.0" />
                </BorderPane.margin>

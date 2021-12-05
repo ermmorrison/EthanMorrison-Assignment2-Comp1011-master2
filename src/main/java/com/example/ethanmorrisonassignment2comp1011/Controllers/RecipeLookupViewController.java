@@ -49,6 +49,12 @@ public class RecipeLookupViewController implements Initializable {
         mealsListView.getItems().addAll(APIUtility.getMealFromAPI(categoryTextField.getText()).getSearch());
     }
 
+    @FXML
+    void getSearchResults3(ActionEvent event) throws IOException, InterruptedException {
+        mealsListView.getItems().clear();
+        mealsListView.getItems().addAll(APIUtility.getRandomMealFromAPI().getSearch());
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         mealsListView.getSelectionModel().selectedItemProperty().addListener(

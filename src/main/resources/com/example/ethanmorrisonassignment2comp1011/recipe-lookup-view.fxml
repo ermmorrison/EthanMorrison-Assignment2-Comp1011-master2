@@ -49,6 +49,11 @@
                         <Insets top="15.0" />
                      </VBox.margin>
                   </Button>
+                  <Button mnemonicParsing="false" onAction="#getSearchResults3" text="Pick For Me">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
          </left>
