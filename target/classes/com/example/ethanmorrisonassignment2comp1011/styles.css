@@ -1,0 +1,17 @@
+.root
+{
+    -fx-background-color: #8a2929;
+    -fx-text-size: 16pt;
+}
+
+.label{
+    -fx-text-fill: #ffffff;
+}
+
+#header{
+    -fx-text-size: 35pt;
+}
+
+#instructionsLabel{
+    -fx-text-size: 14pt;
+}
